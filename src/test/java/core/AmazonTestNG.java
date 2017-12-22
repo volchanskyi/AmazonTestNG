@@ -1,5 +1,6 @@
 package core;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -36,8 +37,8 @@ public class AmazonTestNG  {
 	// click(TestData.);
 	// type("twotabsearchtextbox", "iphone");
 	
-	homePage.click("twotabsearchtextbox").type("bla").selectFirstSuggestedItem("issDiv0");
-	expected = "Register: Mercury Tours";
+	homePage.newClick(By.id("twotabsearchtextbox")).type("bla").selectFirstSuggestedItem("issDiv0");
+	expected = "Amazon.com: blackhead remover: Beauty & Personal Care";
 	actual = homePage.getTitle();
 	Assert.assertEquals(actual, expected);
     }

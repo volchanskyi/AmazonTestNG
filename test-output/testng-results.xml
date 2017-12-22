@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24081" started-at="2017-12-22T03:46:31Z" finished-at="2017-12-22T03:46:55Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24081" started-at="2017-12-22T03:46:31Z" finished-at="2017-12-22T03:46:55Z">
+      <class name="core.AmazonTestNG">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:core.AmazonTestNG@60783105]" name="launchBrowser" is-config="true" duration-ms="15747" started-at="2017-12-21T19:46:31Z" finished-at="2017-12-21T19:46:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="verifyHomepageTitle()[pri:0, instance:core.AmazonTestNG@60783105]" name="verifyHomepageTitle" is-config="true" duration-ms="22" started-at="2017-12-21T19:46:47Z" finished-at="2017-12-21T19:46:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomepageTitle -->
+        <test-method status="PASS" signature="register()[pri:0, instance:core.AmazonTestNG@60783105]" name="register" duration-ms="4042" started-at="2017-12-21T19:46:47Z" finished-at="2017-12-21T19:46:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="goBackToHomepage()[pri:0, instance:core.AmazonTestNG@60783105]" name="goBackToHomepage" is-config="true" duration-ms="3297" started-at="2017-12-21T19:46:51Z" finished-at="2017-12-21T19:46:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goBackToHomepage -->
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:core.AmazonTestNG@60783105]" name="terminateBrowser" is-config="true" duration-ms="863" started-at="2017-12-21T19:46:54Z" finished-at="2017-12-21T19:46:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateBrowser -->
+      </class> <!-- core.AmazonTestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

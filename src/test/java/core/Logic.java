@@ -6,11 +6,14 @@ import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Logic {
     static WebDriver driver;
@@ -23,6 +26,7 @@ public class Logic {
     private String elem;
     private String keys;
     private String url;
+    private By e;
 
 
     private static boolean isPresent(String element_id) {
@@ -58,6 +62,15 @@ public class Logic {
 	} else
 	return this;
     }
+    public Logic newClick(By e) {
+	WebDriverWait exWait = new WebDriverWait(driver, 10);
+	if (exWait.until(ExpectedConditions.visibilityOfElementLocated(e)) != null) {
+	    this.e = e;
+	    driver.findElement(e).click();
+	    return this;
+	} else
+	    return this;
+    }
 
     // public static boolean type(String param, String keys){
     // if (isPresent(param)) {
@@ -68,7 +81,7 @@ public class Logic {
     // }
     public Logic type(String keys) {
 	this.keys = keys;
-	driver.findElement(By.id(this.elem)).sendKeys(this.keys);
+	driver.findElement(this.e).sendKeys(this.keys);
 	return this;
     }
 
